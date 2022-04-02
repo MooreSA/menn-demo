@@ -1,6 +1,13 @@
-FROM node:lts-alpine
+FROM node:lts-alpine AS builder
 
-# 
+
+ENV MONGO_USERNAME="root"
+ENV MONGO_PASSWORD="example"
+ENV MONGO_HOSTNAME="db"
+ENV MONGO_PORT="27017"
+ENV MONGO_DB="test"
+ENV REVALIDATION_SECRET="thisisasecret"
+
 WORKDIR /app
 # Install the project dependencies
 COPY package*.json ./
@@ -8,11 +15,11 @@ RUN npm install
 # Copy the files from the root of the project to the /app directory
 COPY . .
 # Build the project
-RUN npm run build 
+# RUN npm run build 
 
 # Expose the port
 EXPOSE 80
 ENV PORT 80
 
 # Run the project
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "deploy" ]

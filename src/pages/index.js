@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Deployment Ready MENN Boilerplate</h1>
+        <h1 className={styles.title}>Self Directed Example</h1>
         <h2 className={styles.subtitle}>By Seamus Moore</h2>
         <h4 className={styles.description}>With MongoDB/Mongoose</h4>
       </main>

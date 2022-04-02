@@ -5,7 +5,18 @@ services:
       context: ./src
       dockerfile: Dockerfile.prod
     image: next-js-typescript
+    environment:
+      MONGO_USERNAME: root
+      MONGO_PASSWORD: example
+      MONGO_HOSTNAME: db
+      MONGO_PORT: 27017
+      MONGO_DB: test
+      REVALIDATION_SECRET: thisisasecret
     restart: always
+    depends_on:
+      - db
+    networks:
+      - next-network
     volumes:
       - ./src:/app
     ports:
