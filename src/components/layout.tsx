@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
                   </Link>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                  <Link href="/api-test/add">API POST</Link>
+                  <Link href="/add">API POST</Link>
                 </MenuItem>
               </Menu>
             </nav>
