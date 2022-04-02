@@ -35,7 +35,7 @@ const View = () => {
   };
 
   const getDataCallback = useCallback(async () => {
-    fetch("http://localhost/api/getMeals").then((res) => {
+    fetch("/api/getMeals").then((res) => {
       res.json().then((json) => {
         setMeals(json.data.meals);
       });
