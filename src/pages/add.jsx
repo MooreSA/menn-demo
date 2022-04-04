@@ -29,7 +29,6 @@ const Add = () => {
     const json = await res.json();
     if (res.ok) {
       setError(null);
-      setMeal(0);
       setName("");
       setCalories(0);
     } else {
@@ -43,7 +42,6 @@ const Add = () => {
   return (
     <Box>
       <h1 style={{ margin: "rem" }}>What have you Eaten?</h1>
-      <Link href="view">View All</Link>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <Box component="form" noValidate autoComplete="off">
         <Stack spacing={2}>

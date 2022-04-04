@@ -45,7 +45,10 @@ const View = (props) => {
         the server. This page is set to invalidate the cache every 30 seconds.
       </p>
       <p>This page was created on {timeCreated}</p>
-      <Link href="/add">Add More</Link>
+      <Button variant="outlined">
+        {" "}
+        <Link href="/add">Add More</Link>
+      </Button>
       {error && <p style={{ color: "red" }}>{error}</p>}
       <Snackbar
         open={open}

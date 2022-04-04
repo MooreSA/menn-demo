@@ -97,7 +97,6 @@ export async function getStaticProps() {
       meals,
       timeCreated,
     },
-    revalidate: 1000,
   };
 }
 
