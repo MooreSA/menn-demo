@@ -6,11 +6,11 @@ services:
       dockerfile: Dockerfile.prod
     image: next-js-typescript
     environment:
-      MONGO_USERNAME: root
-      MONGO_PASSWORD: example
+      MONGO_USERNAME: spaceMongoMaster
+      MONGO_PASSWORD: 9oKmK^&Q#DWy
       MONGO_HOSTNAME: db
       MONGO_PORT: 27017
-      MONGO_DB: test
+      MONGO_DB: spacemongo
       REVALIDATION_SECRET: thisisasecret
     restart: always
     depends_on:
@@ -31,9 +31,9 @@ services:
     volumes:
       - data-volume:/data/db
     environment:
-      MONGO_INITDB_DATABASE: test
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: spacemongo
+      MONGO_INITDB_ROOT_USERNAME: spaceMongoMaster
+      MONGO_INITDB_ROOT_PASSWORD: 9oKmK^&Q#DWy
     ports:
       - "27017:27017"
     networks:

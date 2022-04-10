@@ -1,11 +1,11 @@
 FROM node:lts-alpine AS builder
 
 
-ENV MONGO_USERNAME="root"
-ENV MONGO_PASSWORD="example"
+ENV MONGO_USERNAME="spaceMongoMaster"
+ENV MONGO_PASSWORD="9oKmK^&Q#DWy"
 ENV MONGO_HOSTNAME="db"
 ENV MONGO_PORT="27017"
-ENV MONGO_DB="test"
+ENV MONGO_DB="spacemongo"
 ENV REVALIDATION_SECRET="thisisasecret"
 
 WORKDIR /app
